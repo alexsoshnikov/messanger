@@ -63,6 +63,8 @@ export default {
   bottom: 80px;
   padding: 1rem;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 </style>
 

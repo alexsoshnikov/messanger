@@ -36,6 +36,7 @@ export default {
   p {
     margin-top: 0.4rem;
     margin-bottom: 0.7rem;
+    font-size: 17px;
   }
 }
 
@@ -58,6 +59,7 @@ export default {
 
   p {
     margin-bottom: 0;
+    font-size: 16px;
   }
 }
 

@@ -1,7 +1,7 @@
 <template>
-  <v-layout column justify-center align-center>
+  <v-layout column justify-center align-center app>
     <v-flex xs12 sm8>
-      <v-card min-width="500">
+      <v-card class="media-card">
         <v-snackbar v-model="snackbar" :timeout="6000" top>
           {{ message }}
           <v-btn dark text @click="snackbar = false">Close</v-btn>
@@ -37,6 +37,7 @@ export default {
     snackbar: false,
     message: "",
     valid: true,
+    ccc: 450,
     name: "",
     nameRules: [
       v => !!v || "Name is required",
@@ -45,7 +46,7 @@ export default {
     room: "",
     roomRules: [
       v => !!v || "Enter the right room",
-      v => /[0-9]/g.test(v) || "Invalid room"
+      v => /[0-9]/.test(v) || "Invalid room"
     ]
   }),
   mounted() {
@@ -79,3 +80,15 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.media-card {
+  width: 500px;
+}
+
+@media screen and (max-width: 500px) {
+  .media-card {
+    width: 300px;
+  }
+}
+</style>

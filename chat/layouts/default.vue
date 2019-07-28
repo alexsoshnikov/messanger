@@ -11,7 +11,7 @@
           </v-list-tile-content>
 
           <v-list-tile-action>
-            <v-icon :color="item.id === user.id  ? '#1976d2' : 'grey'">chat_bubble</v-icon>
+            <v-icon :color="item.id === user.id   ? '#1976d2' : 'grey'">chat_bubble</v-icon>
           </v-list-tile-action>
         </v-list-tile>
       </v-list>
@@ -21,7 +21,7 @@
       <v-btn icon @click="exit">
         <v-icon>arrow_back</v-icon>
       </v-btn>
-      <v-toolbar-title>Room {{user.room}}</v-toolbar-title>
+      <v-toolbar-title>Room #{{user.room}}</v-toolbar-title>
     </v-toolbar>
     <v-content>
       <div style="height: 100%">
@@ -51,7 +51,7 @@ export default {
       this.width = window.innerWidth;
     }
   },
-  created() {
+  mounted() {
     window.addEventListener("resize", this.updateWidth);
     this.updateWidth();
   }
